@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="BackgroundDark" Color="#202020"/>
+
+    <SolidColorBrush x:Key="Primary" Color="#5fb2f2"/>
+    <SolidColorBrush x:Key="PrimaryHover" Color="#58a3dc"/>
+    <SolidColorBrush x:Key="Warning" Color="#e81123"/>
+
+    <SolidColorBrush x:Key="PrimaryTextLight" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="SecondaryTextLight" Color="#fafafa"/>
+    <SolidColorBrush x:Key="TertiaryTextLight" Color="#ececec"/>
+    <SolidColorBrush x:Key="GreyedText" Color="#696969"/>
+    <SolidColorBrush x:Key="SecondaryGreyedText" Color="#989898"/>
+
+    <SolidColorBrush x:Key="ButtonControlDark" Color="#323232"/>
+    <SolidColorBrush x:Key="ButtonNumberDark" Color="#3b3b3b"/>
+
+</ResourceDictionary>

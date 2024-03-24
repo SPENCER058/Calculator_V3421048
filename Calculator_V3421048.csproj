@@ -18,4 +18,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Styles\" />
+  </ItemGroup>
+
 </Project>
