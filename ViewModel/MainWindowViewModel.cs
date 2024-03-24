@@ -252,6 +252,15 @@ namespace Calculator_V3421048.ViewModel
 
 		private void HandleOperator (object sender)
 		{
+			if (isLoaded)
+			{
+				number1 = result;
+				number2 = 0;
+				result = 0;
+
+				isLoaded= false;
+			}
+
 			if (result != 0)
 			{
 				number1 = result;

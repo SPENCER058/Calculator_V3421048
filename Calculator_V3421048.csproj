@@ -6,11 +6,16 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\Icon\Windows_Calculator_icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Resources\Icon\Windows_Calculator_icon.ico" />
     <None Remove="Resources\Icon\Windows_Calculator_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Icon\Windows_Calculator_icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
