@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Calculator_V3421048.ViewModel;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Calculator_V3421048.View
@@ -6,9 +7,13 @@ namespace Calculator_V3421048.View
 
 	public partial class MainWindow : Window
 	{
+		MainWindowViewModel vm;
+
 		public MainWindow ()
 		{
 			InitializeComponent();
+			vm = new MainWindowViewModel();
+			DataContext = vm;
 		}
 
 		public void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -35,6 +40,7 @@ namespace Calculator_V3421048.View
 
 		public void BtnClose_Click(object sender, RoutedEventArgs e)
 		{
+			vm.CloseConnection();
 			Application.Current.Shutdown();
 		}
 

@@ -187,8 +187,6 @@
                             Command="{Binding ConvertPositiveNegativeCommand}"/>
                     <Button Content="0" Grid.Column="1" Grid.Row="4" Style="{StaticResource DigitCalculator}"
                             Command="{Binding DigitCommand}" CommandParameter="0"/>
-                    <Button Content="," Grid.Column="2" Grid.Row="4" Style="{StaticResource DigitCalculator}"
-                            Command="{Binding HandleDecimal}"/>
                     <Button Content="=" Grid.Column="3" Grid.Row="4" Style="{StaticResource CalculatorEqualTolButton}"
                             Command="{Binding EqualsCommand}"/>
                     <!--#endregion-->

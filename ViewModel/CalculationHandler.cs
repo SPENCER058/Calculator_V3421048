@@ -2,7 +2,7 @@
 {
 	internal class CalculationHandler
 	{
-		public long Calculate (long number1, long number2, char calcOperator)
+		public double Calculate (double number1, double number2, char calcOperator)
 		{
 			switch (calcOperator)
 			{
@@ -21,11 +21,11 @@
 			}
 		}
 
-		public long Addition (long number1, long number2) => number1 + number2;
-		public long Subtraction (long number1, long number2) => number1 - number2;
-		public long Multiplication (long number1, long number2) => number1 * number2;
-		public long Division (long number1, long number2) => number1 / number2;
-		public long Modulus (long number1, long number2) => number1 % number2;
+		public double Addition (double number1, double number2) => number1 + number2;
+		public double Subtraction (double number1, double number2) => number1 - number2;
+		public double Multiplication (double number1, double number2) => number1 * number2;
+		public double Division (double number1, double number2) => number1 / number2;
+		public double Modulus (double number1, double number2) => number1 % number2;
 
 	}
 }
