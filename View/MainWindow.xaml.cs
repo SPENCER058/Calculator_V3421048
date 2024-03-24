@@ -4,11 +4,16 @@ using System.Windows.Input;
 
 namespace Calculator_V3421048.View
 {
-
+	/// <summary>
+	/// Interaction logic for MainWindow.xaml
+	/// </summary>
 	public partial class MainWindow : Window
 	{
-		MainWindowViewModel vm;
+		private MainWindowViewModel vm;
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="MainWindow"/> class.
+		/// </summary>
 		public MainWindow ()
 		{
 			InitializeComponent();
@@ -16,17 +21,26 @@ namespace Calculator_V3421048.View
 			DataContext = vm;
 		}
 
-		public void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+		/// <summary>
+		/// Handles the event when the left mouse button is pressed down on the window, allowing for window dragging.
+		/// </summary>
+		public void Window_MouseLeftButtonDown (object sender, MouseButtonEventArgs e)
 		{
 			DragMove();
 		}
 
-		public void BtnMinimize_Click(object sender, RoutedEventArgs e)
+		/// <summary>
+		/// Handles the event when the minimize button is clicked.
+		/// </summary>
+		public void BtnMinimize_Click (object sender, RoutedEventArgs e)
 		{
 			WindowState = WindowState.Minimized;
 		}
 
-		public void BtnMaximize_Click(object sender, RoutedEventArgs e)
+		/// <summary>
+		/// Handles the event when the maximize/restore button is clicked.
+		/// </summary>
+		public void BtnMaximize_Click (object sender, RoutedEventArgs e)
 		{
 			if (WindowState == WindowState.Normal)
 			{
@@ -38,12 +52,13 @@ namespace Calculator_V3421048.View
 			}
 		}
 
-		public void BtnClose_Click(object sender, RoutedEventArgs e)
+		/// <summary>
+		/// Handles the event when the close button is clicked.
+		/// </summary>
+		public void BtnClose_Click (object sender, RoutedEventArgs e)
 		{
 			vm.CloseConnection();
 			Application.Current.Shutdown();
 		}
-
 	}
-	
 }

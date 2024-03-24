@@ -1,12 +1,17 @@
 ﻿using Calculator_V3421048.Model;
-using System;
 using System.Data.SQLite;
 using System.IO;
 
+/// <summary>
+/// Provides data access functionality for interacting with SQLite database.
+/// </summary>
 public class SQLiteDataAccess
 {
 	private SQLiteConnection _connection;
 
+	/// <summary>
+	/// Initializes a new instance of the <see cref="SQLiteDataAccess"/> class.
+	/// </summary>
 	public SQLiteDataAccess ()
 	{
 		string folderName = "Databases";
@@ -42,6 +47,9 @@ public class SQLiteDataAccess
 		}
 	}
 
+	/// <summary>
+	/// Initializes the SQLite database by creating the required table if it doesn't exist.
+	/// </summary>
 	private void InitializeDatabase ()
 	{
 		string createTableQuery = @"CREATE TABLE IF NOT EXISTS CalculationHistory (
@@ -57,6 +65,10 @@ public class SQLiteDataAccess
 		}
 	}
 
+	/// <summary>
+	/// Saves a calculation history entry into the database.
+	/// </summary>
+	/// <param name="history">The calculation history entry to be saved.</param>
 	public void SaveCalculationHistory (CalculationHistory history)
 	{
 		string insertQuery = @"INSERT INTO CalculationHistory (FirstNumber, SecondNumber, CalculationOperator, Result) 
@@ -73,6 +85,10 @@ public class SQLiteDataAccess
 		}
 	}
 
+	/// <summary>
+	/// Retrieves all calculation history entries from the database.
+	/// </summary>
+	/// <returns>A list of all calculation history entries.</returns>
 	public List<CalculationHistory> GetAllHistoryEntries ()
 	{
 		List<CalculationHistory> historyEntries = new List<CalculationHistory>();
@@ -102,6 +118,9 @@ public class SQLiteDataAccess
 		return historyEntries;
 	}
 
+	/// <summary>
+	/// Clears all calculation history entries from the database.
+	/// </summary>
 	public void ClearAllHistory ()
 	{
 		string deleteQuery = "DELETE FROM CalculationHistory";
@@ -112,6 +131,9 @@ public class SQLiteDataAccess
 		}
 	}
 
+	/// <summary>
+	/// Closes the connection to the SQLite database.
+	/// </summary>
 	public void CloseConnection ()
 	{
 		_connection?.Close(); // Check if connection is null before closing

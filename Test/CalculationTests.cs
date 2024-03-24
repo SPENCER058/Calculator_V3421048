@@ -3,18 +3,27 @@ using NUnit.Framework;
 
 namespace Calculator_V3421048.Test
 {
+	/// <summary>
+	/// Test class for testing calculation methods.
+	/// </summary>
 	public class CalculationTests
 	{
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 		private CalculationHandler calculator;
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
+		/// <summary>
+		/// Initializes the <see cref="CalculationTests"/> class before running any tests.
+		/// </summary>
 		[SetUp]
-		public void Setup()
+		public void Setup ()
 		{
 			calculator = new CalculationHandler();
 		}
 
+		/// <summary>
+		/// Test method for addition operation.
+		/// </summary>
 		[Test]
 		public void AdditionTest ()
 		{
@@ -23,12 +32,14 @@ namespace Calculator_V3421048.Test
 
 			double expectedResult = 50;
 
-			double result = calculator.Addition(a,b);
+			double result = calculator.Addition(a, b);
 
 			Assert.Equals(expectedResult, result);
 		}
 
-
+		/// <summary>
+		/// Test method for subtraction operation.
+		/// </summary>
 		[Test]
 		public void SubstractionTest ()
 		{
@@ -42,7 +53,9 @@ namespace Calculator_V3421048.Test
 			Assert.Equals(expectedResult, result);
 		}
 
-
+		/// <summary>
+		/// Test method for multiplication operation.
+		/// </summary>
 		[Test]
 		public void MultiplyTest ()
 		{
@@ -56,7 +69,9 @@ namespace Calculator_V3421048.Test
 			Assert.Equals(expectedResult, result);
 		}
 
-
+		/// <summary>
+		/// Test method for division operation.
+		/// </summary>
 		[Test]
 		public void DivisionTest ()
 		{
@@ -70,7 +85,9 @@ namespace Calculator_V3421048.Test
 			Assert.Equals(expectedResult, result);
 		}
 
-
+		/// <summary>
+		/// Test method for modulus operation.
+		/// </summary>
 		[Test]
 		public void ModulusTest ()
 		{
