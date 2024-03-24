@@ -183,10 +183,16 @@
                     <!--#endregion-->
 
                     <!--#region Fifth Row -->
-                    <Button Content="+/-" Grid.Column="0" Grid.Row="4" Style="{StaticResource DigitCalculator}"
-                            Command="{Binding ConvertPositiveNegativeCommand}"/>
+                    <TextBlock Grid.Column="0" Grid.Row="4" Foreground="{StaticResource PrimaryTextLight}" 
+                               HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="14">
+                        MODEL <LineBreak/>
+                        V3421048
+                        
+                    </TextBlock>
                     <Button Content="0" Grid.Column="1" Grid.Row="4" Style="{StaticResource DigitCalculator}"
                             Command="{Binding DigitCommand}" CommandParameter="0"/>
+                    <Button Content="+/-" Grid.Column="2" Grid.Row="4" Style="{StaticResource DigitCalculator}"
+                            Command="{Binding ConvertPositiveNegativeCommand}"/>
                     <Button Content="=" Grid.Column="3" Grid.Row="4" Style="{StaticResource CalculatorEqualTolButton}"
                             Command="{Binding EqualsCommand}"/>
                     <!--#endregion-->
